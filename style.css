@@ -37,27 +37,27 @@ svg {
 }
 
 .kick-pad {
-  background-color: #3474ac;
+  background-color: #82bbed;
 }
 
 .snare-pad {
-  background-color: #ef6384;
+  background-color: #f09fc2;
 }
 
 .hihat-pad {
-  background-color: #edcd81;
+  background-color: #fcda7e;
 }
 
-.kick-pad:active {
-  background-color: #5b9bd3;
+.kick-pad.active {
+  background-color: #0a70c9;
 }
 
-.snare-pad:active {
-  background-color: #fb6daa;
+.snare-pad.active {
+  background-color: #f21e7a;
 }
 
-.hihat-pad:active {
-  background-color: #fffd88;
+.hihat-pad.active {
+  background-color: #fdba00;
 }
 
 .kick-track,
