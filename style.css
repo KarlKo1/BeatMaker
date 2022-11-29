@@ -34,6 +34,7 @@ svg {
   height: 7rem;
   margin: 1rem 0.5rem;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .kick-pad {
@@ -115,4 +116,51 @@ svg {
 select {
   padding: 1rem;
   font-size: 1rem;
+}
+
+/* Dark Mode */
+label {
+  position: absolute;
+  width: 4.5rem;
+  height: 2.2rem;
+  right: 2rem;
+  top: 2rem;
+  border: 0.2rem solid;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+label:before {
+  position: absolute;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  left: 0.3rem;
+  top: 0.1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: black;
+  transition: 0.8s;
+}
+
+label.active:before {
+  left: 2rem;
+  background-color: white;
+}
+
+.night {
+  background-color: black;
+  color: white;
+  transition: 2.8s;
+  animation-direction: alternate;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
 }
