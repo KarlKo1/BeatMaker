@@ -12,17 +12,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./icons/iconmonstr-sound-wave-1.svg" />
     <title>BeatMaker | Ko</title>
   </head>
   <body>
-    <header>
-      <label id="dark-change"></label>
-    </header>
     <div class="sequencer">
       <div class="kick-track">
         <div class="controls">
           <h1>Kick</h1>
+          <label id="dark-change"></label>
           <button data-track="0" class="mute kick-volume">
             <i class="fa-solid fa-volume-xmark"></i>
           </button>
@@ -96,11 +101,35 @@
           <div class="pad hihat-pad b7"></div>
         </div>
       </div>
+      <div class="clap-track">
+        <div class="controls">
+          <h1>Clap</h1>
+          <button data-track="3" class="mute clap-volume">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="clap-select" id="clap-select">
+            <option value="./sounds/clap-analog.wav">Clap Analog</option>
+            <option value="./sounds/clap-808.wav">808 Clap</option>
+            <option value="./sounds/clap-slapper.wav">Clap Slapper</option>
+          </select>
+        </div>
+        <div class="clap">
+          <div class="pad clap-pad b0"></div>
+          <div class="pad clap-pad b1"></div>
+          <div class="pad clap-pad b2"></div>
+          <div class="pad clap-pad b3"></div>
+          <div class="pad clap-pad b4"></div>
+          <div class="pad clap-pad b5"></div>
+          <div class="pad clap-pad b6"></div>
+          <div class="pad clap-pad b7"></div>
+        </div>
+      </div>
       <button class="play">Play</button>
       <div class="tempo">
         <input
           type="range"
           class="tempo-slider"
+          autocomplete="off"
           max="300"
           min="20"
           value="150"
@@ -111,6 +140,7 @@
     <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
     <audio class="snare-sound" src="./sounds/snare-acoustic01.wav"></audio>
     <audio class="hihat-sound" src="./sounds/hihat-acoustic01.wav"></audio>
+    <audio class="clap-sound" src="./sounds/clap-analog.wav"></audio>
     <script src="./app.js"></script>
   </body>
 </html>
